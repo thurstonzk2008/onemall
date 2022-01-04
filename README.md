@@ -1,5 +1,13 @@
 [toc]
 
+> 友情提示：近期在升级和优化该项目，建议先 Star 本项目。主要在做几个事情：
+> 
+> * 1、微服务技术选型以 Spring Cloud Alibaba 为中心。
+> * 2、修改项目分层，并合并部分服务，简化整体服务的复杂性。
+> * 3、将管理后台从 React 重构到 Vue 框架。
+> 
+> 交流群：[传送门](http://www.iocoder.cn/mall-user-group/?vip&gitee)
+
 # 前言
 
 基于微服务的思想，构建在 B2C 电商场景下的项目实战。
@@ -18,46 +26,30 @@
     > 一起交流，Get 知识。
 
 * 我们迫切希望更多的参与进来，可以加入「交流群」，一起骚聊。
-    * [《Onemall 电商开源项目 —— 应用分层》](http://www.iocoder.cn/Onemall/Application-layer/?vip&onemall)
+    * [《Onemall 电商开源项目 —— 应用分层》](http://www.iocoder.cn/Onemall/Application-layer/?onemall)
+    * [《Onemall 电商开源项目 —— 搭建调试环境》](http://www.iocoder.cn/Onemall/build-debugger-environment/?onemall)
 
-# 近期计划
-
-近期准备开发如下功能：
-
-> 🔥 ：近期会更新新的项目分层结构。
-
-1. 微信 H5 网页登陆 @To0R𓃰
-2. 订单评价 @wang171776704
-3. 商品品牌 @黑子
-4. 短信接入 @小范
-5. 访问日志、错误日志接入
-6. 会员资料 @nengjie
-7. 拼团购买 @大太阳
-8. 部门管理 @Tprotect曦
-9. 商品收藏 @笑笑生
+* 前端项目地址：<https://github.com/YunaiV/onemall-web>
 
 # 演示
 
 > 艿艿：目前的开发者，都是后端出身。所以，一帮没有审美自觉的人，撸出来的前端界面，可能是东半球倒数第二难看。
 >
-> 迫切希望，有前端能力不错的小伙伴，加入我们，一起来完善「一个商城」。
->
-> 啊啊啊！我好像做店铺装修功能。
-
-## H5 商城
-
-[体验传送门](http://h5.shop.iocoder.cn:18099)
-
-![GIF 图-耐心等待](https://raw.githubusercontent.com/YunaiV/Blog/master/Mall/onemall-h5-min.gif)
+> 迫切希望，有前端能力不错的小伙伴，加入我们，一起来完善「芋道商城」。
 
 ## 管理后台
 
-[体验传送门](http://admin.shop.iocoder.cn:18099)
-
-* 账号：yudaoyuanma
-* 密码：yudaoyuanma
+体验传送门：<http://dashboard.shop.iocoder.cn>
 
 ![GIF 图-耐心等待](https://raw.githubusercontent.com/YunaiV/Blog/master/Mall/onemall-admin-min.gif)
+
+## H5 商城
+
+体验传送门：<http://h5.shop.iocoder.cn>
+
+*2M 带宽小水管，访问略微有点慢*
+
+![GIF 图-耐心等待](https://raw.githubusercontent.com/YunaiV/Blog/master/Mall/onemall-h5-min.gif)
 
 ## 其它演示
 
@@ -67,8 +59,9 @@
 
 **SkyWalking UI**
 
-* 地址：http://skywalking-ui.shop.iocoder.cn:18099
-* 管理员账号：admin / admin
+* 地址：<http://skywalking.shop.iocoder.cn>
+
+> 教程：[《芋道 SkyWalking 安装部署》](http://www.iocoder.cn/SkyWalking/install/?onemall)
 
 **Grafana UI**
 
@@ -83,24 +76,29 @@
 
 **RocketMQ Console**
 
-* 地址：http://rocketmq-console.shop.iocoder.cn:18099
-* 管理员账号：admin / RPsa2GHjTNs8pxEU
+* 地址：<http://rocketmq.shop.iocoder.cn>
 
-**Sentinel Console**
-
-* 地址：http://sentinel.shop.iocoder.cn:18099
-* 账号：sentinel / sentinel
+> 教程：[《芋道 RocketMQ 安装部署》](http://www.iocoder.cn/RocketMQ/install/?onemall)
 
 **XXL-Job Console**
 
-* 地址：http://job-console.shop.iocoder.cn:18099
-* 管理员账号：admin / 233666
+* 地址：<http://xxl-job.shop.iocoder.cn>
+* 管理员账号：admin / 123456
+
+> 教程：[《芋道 XXL-Job 安装部署》](http://www.iocoder.cn/XXL-JOB/install/?onemall)
+
+**Sentinel Console**
+
+* 地址：<http://sentinel.shop.iocoder.cn>
+* 账号：sentinel / sentinel
+
+> 教程：[《芋道 Sentinel 安装部署》](http://www.iocoder.cn/Sentinel/install/?onemall)
 
 # 技术
 
 ## 搭建环境
 
-[搭建调试环境](https://gitee.com/zhijiantianya/onemall/blob/master/docs/setup/quick-start.md)
+[搭建调试环境](http://www.iocoder.cn/Onemall/build-debugger-environment/)
 
 ## 架构图
 
@@ -110,33 +108,35 @@ TODO 此处应有一个架构图的装逼 JPG 图。
 
 | 模块 | 名称 | 端口 | |
 | --- | --- | --- | --- |
-| `admin-web` | 【前端】管理后台 | HTTP 8080 | |
-| `mobile-web` | 【前端】商城 H5 | HTTP 8000 | |
-| `system-application` | 管理员 HTTP 服务 | HTTP 18083 | [接口文档](http://api.shop.iocoder.cn:18099/admin-api/doc.html) |
-| `user-application` | 用户 HTTP 服务 | HTTP 18082 | [接口文档](http://api.shop.iocoder.cn:18099/user-api/doc.html) |
-| `product-application` | 商品 HTTP 服务 | HTTP 18081 | [接口文档](http://api.shop.iocoder.cn:18099/product-api/doc.html) |
-| `pay-application` | 支付 HTTP 服务 | HTTP 18084 | [接口文档](http://api.shop.iocoder.cn:18099/pay-api/doc.html) |
-| `promotion-application` | 促销 HTTP 服务 | HTTP 18085 | [接口文档](http://api.shop.iocoder.cn:18099/promotion-api/doc.html) |
-| `search-application` | 搜索 HTTP 服务 | HTTP 18086 | [接口文档](http://api.shop.iocoder.cn:18099/search-api/doc.html) |
-| `order-application` | 订单 HTTP 服务 | HTTP 18088 | [接口文档](http://api.shop.iocoder.cn:18099/order-api/doc.html) |
+| [`admin-dashboard-vue`](https://github.com/YunaiV/onemall-web/tree/master/admin-dashboard-vue) | 【前端】管理后台 | HTTP 9527 | |
+| [`user-dashboard-vue`](https://github.com/YunaiV/onemall-web/tree/master/user-h5-vue) | 【前端】商城平台 | HTTP 8080 | |
+| | | |
+| | | |
+| `management-web-app`  | 【后端】管理平台 HTTP 服务 | HTTP 18083 | [接口文档](http://api-dashboard.shop.iocoder.cn/management-api/doc.html) |
+| `shop-web-app`  | 【后端】商城平台 HTTP 服务 | HTTP 18084 | [接口文档](http://api-h5.shop.iocoder.cn/shop-api/doc.html) |
+| | | |
+| | | |
+| `system-service-project` | 系统 RPC 服务 |  随机 |  
+| `user-service-project` | 用户 RPC 服务 | 随机 |  |
+| `promotion-service-project` | 营销 RPC 服务 | 随机 |  |
+| `pay-service-project` | 支付 RPC 服务 | 随机 |  |
+| `trade-service-project` | 交易 RPC 服务 | 随机 |  |
+| `product-service-project` | 商品 RPC 服务 | 随机 |  |
+| `search-service-project` | 搜索 RPC 服务 | 随机 |  |
 
 -------
 
 后端项目，目前的项目结构如下：
 
 ```Java
-[-] xxx
-  ├──[-] xxx-application // 提供对外 HTTP API 。
-  ├──[-] xxx-service-api // 提供 Dubbo 服务 API 。
-  ├──[-] xxx-service-impl // 提供 Dubbo 服务 Service 实现。
+[-] xxx-web-app // 提供对外 HTTP API。
+
+[-] xxx-service-project
+    ├──[-] xxx-service-api // 提供对内 RPC API 。
+    ├──[-] xxx-service-app // 提供对内 RPC 实现。
+    ├──[-] xxx-service-integration-test // 集成测试。
 ```
 
-考虑到大多数公司，无需拆分的特别细，并且过多 JVM 带来的服务器成本。所以目前的设定是：
-
-* `xxx-service-impl` 内嵌在 `xxx-application` 中运行。
-* MQ 消费者、定时器执行器，内嵌在 `xxx-service-impl` 中运行。
-
-也就是说，一个 `xxx-application` 启动后，该模块就完整启动了。
 
 ## 技术栈
 
@@ -168,8 +168,6 @@ TODO 此处应有一个架构图的装逼 JPG 图。
 
 ### 前端
 
-商城 H5 和管理后台，分别采用了 Vue 和 React ，基于其适合的场景考虑。具体的，可以看看 [《为什么 React 比 Vue 更适合大型应用？》](https://www.zhihu.com/question/314761485/answer/615318460) 的讨论。
-
 **商城 H5**
 
 | 框架 | 说明 |  版本 |
@@ -181,8 +179,8 @@ TODO 此处应有一个架构图的装逼 JPG 图。
 
 | 框架 | 说明 |  版本 |
 | --- | --- | --- |
-| [React](https://reactjs.org/) | JavaScript 框架  | 16.7.0 |
-| [Ant Design](https://ant.design/docs/react/introduce-cn) | React UI 组件库 | 3.13.0 |
+| [Vue](https://cn.vuejs.org/index.html) | JavaScript 框架 | 2.5.17 |
+| [Vue Element Admin](https://ant.design/docs/react/introduce-cn) | 后台前端解决方案 | - |
 
 ### 监控
 
